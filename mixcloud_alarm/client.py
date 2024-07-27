@@ -10,4 +10,6 @@ def get_latest_upload(username, access_token=None):
         headers['Authorization'] = f'Bearer {access_token}'
     response = requests.get(url, headers=headers)
     data = response.json()
+    # latest_mix = data['cloudcasts'][0]  # Assume first cloudcast is the latest
+    # return latest_mix['url']
     return data
